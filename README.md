@@ -7,6 +7,7 @@ git clone https://github.com/LukieHZX/ikahoot_cheat_kit.git
 or just download it
 
 pip(3) install KahootPy (for the Spammer and Finder)
+
 pip(3) install requests (for the Answers)
 
 HOW TO USE IT:
