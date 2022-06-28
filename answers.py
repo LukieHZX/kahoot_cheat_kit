@@ -8,7 +8,7 @@ try:
         email = f_[0]
         pswd = f_[1]
 except FileNotFoundError:
-    print('Create file: login.kahoot and type in first line you email and in the second line your password (of your kahoot-account)')
+    print('[-] Create file: login.kahoot and type in first line you email and in the second line your password (of your kahoot-account)')
     exit(-1)
 
 
@@ -16,7 +16,7 @@ def get_answers(quizid, email, pswd):
     resp = requests.post('https://create.kahoot.it/rest/authenticate', data=json.dumps({'username':email,'password':pswd,'grant_type':'password'}).encode(),headers={'content-type':'application/json'}).json()
 
     if 'error' in resp:
-        print('Email or Password is wrong!')
+        print('[-] Email or Password is wrong!')
         exit(-1)
 
     resp = requests.get(f'https://create.kahoot.it/rest/kahoots/{quizid}', headers={'content-type' : 'application/json','authorization' : resp['access_token']}).json()
@@ -24,7 +24,7 @@ def get_answers(quizid, email, pswd):
     qs = []
 
     if 'error' in resp:
-        print("Quiz not found!")
+        print("[-] Quiz not found!")
         exit(-1)
     else:
         print(f'[+] Title: "{resp.get("title")}"')
