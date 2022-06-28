@@ -3,12 +3,12 @@ An Kit with a few tools for "cheating" in Kahoot (sometimes it is cheating, some
 
 
 INSTALLATION:
-git clone https://github.com/LukieHZX/ikahoot_cheat_kit.git
+git clone https://github.com/LukieHZX/kahoot_cheat_kit.git
 or just download it
 
-pip(3) install KahootPy (for the Spammer and Finder)
+pip(3) install KahootPy (for the spammer and finder)
 
-pip(3) install requests (for the Answers)
+pip(3) install requests (for the answers)
 
 HOW TO USE IT:
 Spammer (or sometimes called flouder):
