@@ -9,8 +9,10 @@ def get(int_range, id):
             print(i)
     print(str(id) + ' is DONE!')
 
-
-ranges = list(range(int(argv[1].split('-')[0]), int(argv[1].split('-')[1])))
+try:
+    ranges = list(range(int(argv[1].split('-')[0]), int(argv[1].split('-')[1])))
+except (IndexError, ValueError):
+    print(f'Type: {sys.executable} {sys.argv[0]} <range>')
 ranges = [ranges[i:i+250] for i in range(0, len(ranges), 250)]
 
 
